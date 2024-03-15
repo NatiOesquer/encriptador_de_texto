@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
     <title>Encriptador de Texto</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
+
 <body>
     <header>
         <img class="logo" src="imagenes/Logo.png" alt="logo">
     </header>
     <main>
-        <section class="section1">
-            <div class="contenedor-cajatexto">
-                <textarea placeholder="Ingrese el texto aquí" class="cajatexto"></textarea>
-            </div>
-            <div class="alerta">
-                <img src="imagenes/alerta.svg" alt="alerta">
-                <p>Solo letras minúsculas y sin acentos</p>
-            </div>
-            <div class="contenedor-botones">
-                <input type="button" class="btn-encriptar" value="Encriptar">
-                <input type="button" class="btn-desencriptar" value="Desencriptar">
-            </div>
-        </section>
-        <section class="section2">
-            <div class="contenedor-munieco">
-                <img src="imagenes/Muñeco.png" alt="muñeco">
-            </div>
-            <div class="contenedor-parrafo">
-                <h3>Ningún mensaje fue <br> encontrado</h3>
-                <p>Ingresa el texto que deseas encriptar o <br> desencriptar.</p>
-            </div>
-            <div class="contenedor-copiar">
-                <input type="button" class="btn-copiar" value="Copiar">
-            </div>
-            <div class="contenedor-rtdo">
-                <p class="texto-rtdo"></p>
-            </div>
-        </section>
+
+        <div class="contenedor">
+            <textarea placeholder="Ingrese el texto aquí" class="cajatexto" id="cajatexto" cols="30" rows="10"></textarea>
+            <img src="imagenes/Muñeco.png" alt="muñeco" class="muneco">
+            <img src="imagenes/Frame 5.png" alt="Mensaje de no proceso." class="muneco-mensaje">
+            <textarea name="textosalida" id="textosalida" cols="30" rows="10" class="texto-salida" hidden></textarea>
+
+        </div>
+
+        <div class="contenedor-botones">
+            <p class="texto-botones">Solo letras minusculas y sin acentos.</p>
+            <button class="btn encriptar" value="Encriptar" onclick="encriptar()" id="encriptar">Encriptar</button>
+            <button class="btn desencriptar" value="Desencriptar" onclick="desencriptar()"
+                id="desencriptar">Desencriptar</button>
+        </div>
+
+        <div class="contenedor-copiar">
+            <button class="btn copiar" value="Copiar" id="copia" onclick="copiartexto()" hidden>Copiar</button>
+        </div>
+
     </main>
     <footer>
         <p class="copyright">&copy Copyright Natalia Oesquer - Santa Fe - Argentina - 2024 </p>
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
