@@ -1,17 +1,27 @@
 let salida= "";
 let cajatex = "";
 
+function validarTexto(texto) {
+    // Expresión regular para verificar si el texto contiene caracteres no permitidos
+    let regex = /^[a-z\s]+$/;
+    return regex.test(texto);
+}
+
+function mostrarAlerta(titulo, mensaje, icono) {
+    swal.fire({
+        title: titulo,
+        text: mensaje,
+        icon: icono
+    });
+}
+
 function encriptar(){
     salida = "";
-    cajatex = document.querySelector('#cajatexto').value;
+    cajatex = document.querySelector('#cajatexto').value.toLowerCase(); // Convertir texto a minúsculas;
     let texto = cajatex.length;
 
-    if  (texto == 0) {
-        swal.fire({
-            icon: "warning",
-            title: "Oops...",
-            text: "DEBES INGRESAR ALGUN TEXTO PARA ENCRIPTAR!"
-        });
+    if  (texto == 0 || !validarTexto(cajatex)) {
+        mostrarAlerta("Error", "DEBES INGRESAR ALGUN TEXTO VÁLIDO (solo letras minúsculas y espacios) PARA ENCRIPTAR!", "error");
         return
     }
 
@@ -50,17 +60,13 @@ return;
 
 function desencriptar() {
     salida = "";
-    cajatex = document.querySelector('#cajatexto').value;
+    cajatex = document.querySelector('#cajatexto').value.toLowerCase(); // Convertir texto a minúsculas;
     let texto = cajatex.length;
 
     
-    if  (texto == 0) {
-        swal.fire({
-            icon: "warning",
-            title: "Oops...",
-            text: "DEBES PONER UN TEXTO PARA SER DESENCRIPTADO!"
-        });
-        return
+    if  (texto == 0 || !validarTexto(cajatex)) {
+        mostrarAlerta("Error", "DEBES INGRESAR ALGUN TEXTO VÁLIDO (solo letras minúsculas y espacios) PARA DESENCRIPTAR!", "error");
+        return;
     }
 
     document.getElementById("textosalida").removeAttribute("hidden");
@@ -155,11 +161,7 @@ function copiartexto(){
     let content = document.getElementById('textosalida');
     content.select();
     document.execCommand('copy');
-    swal.fire({
-        title: "Bien hecho!",
-        text: "Texto Copiado!",
-        icon: "success"
-    });
+    mostrarAlerta("Copiado", "Texto Copiado!", "success");
     document.getElementById("textosalida").value ="";
     document.getElementById("cajatexto").value="";
     textosalida.setAttribute("hidden", "");
