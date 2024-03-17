@@ -17,8 +17,17 @@ function mostrarAlerta(titulo, mensaje, icono) {
 
 function encriptar(){
     salida = "";
-    cajatex = document.querySelector('#cajatexto').value.toLowerCase(); // Convertir texto a minúsculas;
+    cajatex = document.querySelector('#cajatexto').value; // Convertir texto a minúsculas;
     let texto = cajatex.length;
+
+      // Verificar si hay mayúsculas
+      if (/[A-Z]/.test(cajatex)) {
+        mostrarAlerta("Error", "Solo se permiten letras minúsculas y sin acentos.", "error");
+        return;
+    }
+
+    // Convertir texto a minúsculas después de verificar mayúsculas
+    cajatex = cajatex.toLowerCase();
 
     if  (texto == 0 || !validarTexto(cajatex)) {
         mostrarAlerta("Error", "DEBES INGRESAR ALGUN TEXTO VÁLIDO (solo letras minúsculas y espacios) PARA ENCRIPTAR!", "error");

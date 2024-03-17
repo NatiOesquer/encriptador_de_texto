@@ -8,7 +8,7 @@
     --azul-profundo3: #0A3871;
     --azul-profundo4: #072B61;
     --azul-profundo5: #052051;
-    
+
     --azul-ligth: #F3F5FC;
     --azul-ligth2: #EFF1FA;
     --azul-ligth3: #E9ECF8;
@@ -21,6 +21,7 @@
     --gris4: #495057;
     --gris5: #343A40;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -42,7 +43,7 @@
     width: 100vw;
 }
 
-.cajatexto{
+.cajatexto {
     position: absolute;
     width: 350px;
     height: 170px;
@@ -58,7 +59,7 @@
     padding: 5px;
 }
 
-.muneco{
+.muneco {
     position: absolute;
     width: 336px;
     height: 304px;
@@ -66,7 +67,7 @@
     left: 50px;
 }
 
-.muneco-mensaje{
+.muneco-mensaje {
     position: absolute;
     width: 336px;
     height: 122px;
@@ -75,7 +76,7 @@
     gap: 16px;
 }
 
-.texto-salida{
+.texto-salida {
     position: absolute;
     border-radius: 5px;
     font-family: Inter;
@@ -90,7 +91,7 @@
     box-shadow: 10px 24px 32px -10px rgba(0, 0, 0, 0.4);
 }
 
-.contenedor-botones{
+.contenedor-botones {
     padding: 16px 24px;
     width: 680px;
     font-size: 24px;
@@ -98,7 +99,7 @@
     margin-top: 2rem;
 }
 
-.texto-botones{
+.texto-botones {
     position: absolute;
     font-family: Inter;
     color: var(--gris3);
@@ -108,7 +109,7 @@
     font-weight: bold;
 }
 
-.btn{
+.btn {
     position: absolute;
     font-family: Inter;
     color: white;
@@ -130,28 +131,28 @@
 .desencriptar {
     background: white;
     top: 100px;
-    color: black;    
+    color: black;
 }
 
-.copiar{
-    top:800px;
+.copiar {
+    top: 800px;
     left: 50px;
 }
 
-.btn:hover{
+.btn:hover {
     background: white;
     color: black;
     transform: scale(0.9);
 }
 
-.desencriptar:hover{
+.desencriptar:hover {
     background: var(--azul-profundo2);
     color: white;
 }
 
 .copyright {
     position: absolute;
-    top:1300px;
+    top: 1300px;
     padding: 20px;
     left: 40px;
     color: var(--azul-profundo4);
@@ -160,42 +161,113 @@
 }
 
 
-@media (min-width: 576px) {
-    .cajatexto{
-        width: 450px;
+@media (min-width: 375px) {
+    .cajatexto {
+        width: 250px;
         height: 200px;
-        margin-top: 40px;
-        left: 40px;
+        margin-top: 20px;
+        left: 20px;
     }
 
-    .muneco{
-        top: 500px;
-        left: 140px;
+    .muneco {
+        top: 530px;
+        left: 80px;
+
     }
 
-    .muneco-mensaje{
-        top: 850px;
-        left: 140px;    
+    .muneco-mensaje {
+        top: 866px;
+        left: 64px;
         gap: 16px;
     }
 
-    .texto-salida{
+    .texto-salida {
         margin-top: 485px;
         width: 500px;
         height: 603px;
         left: 50px;
     }
 
-    .contenedor-botones{
+    .contenedor-botones {
         width: 200px;
     }
 
-    .texto-botones{
+    .texto-botones {
         top: 220px;
         left: 50px;
     }
 
-    .btn{
+    .btn {
+        top: 260px;
+        width: 180px;
+        left: 40px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .desencriptar {
+        top: 258px;
+        left: 230px;
+
+    }
+
+    .copiar {
+        top: 900px;
+        left: 140px;
+    }
+
+
+.copyright {
+    top: 1230px;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+}
+
+@media (min-width: 576px) {
+    .cajatexto {
+        width: 450px;
+        height: 200px;
+        margin-top: 40px;
+        left: 40px;
+    }
+
+    .muneco {
+        top: 500px;
+        left: 140px;
+    }
+
+    .muneco-mensaje {
+        top: 850px;
+        left: 140px;
+        gap: 16px;
+    }
+
+    .texto-salida {
+        margin-top: 485px;
+        width: 500px;
+        height: 603px;
+        left: 50px;
+    }
+
+    .contenedor-botones {
+        width: 200px;
+    }
+
+    .texto-botones {
+        top: 220px;
+        left: 50px;
+    }
+
+    .btn {
         top: 260px;
         width: 200px;
         left: 75px;
@@ -204,23 +276,23 @@
         align-content: center;
         justify-content: center;
         align-items: center;
- 
+
     }
 
     .desencriptar {
         left: 308px;
-        
+
     }
 
-    .copiar{
+    .copiar {
         top: 860px;
         left: 201px;
     }
 
     .copyright {
-        top:1230px;
+        top: 1230px;
         text-align: center;
-        align-items: center;        
+        align-items: center;
         font-size: 15px;
         margin-bottom: 10px;
     }
@@ -230,62 +302,62 @@
 
 
 @media (min-width: 780px) {
-    .cajatexto{
+    .cajatexto {
         width: 650px;
         height: 200px;
         margin-top: 40px;
         left: 25px;
     }
 
-    .muneco{
+    .muneco {
         top: 500px;
         left: 170px;
     }
 
-    .muneco-mensaje{
+    .muneco-mensaje {
         top: 800px;
         left: 170px;
         gap: 16px;
     }
 
-    .texto-salida{
+    .texto-salida {
         margin-top: 500px;
         width: 700px;
         height: 650px;
         left: 25px;
     }
 
-    .contenedor-botones{
+    .contenedor-botones {
         width: 200px;
     }
 
-    .texto-botones{
+    .texto-botones {
         top: 150px;
         left: 25px;
     }
 
-    .btn{
+    .btn {
         top: 200px;
         width: 300px;
         left: 25px;
- 
+
     }
 
     .desencriptar {
         left: 350px;
-        
+
     }
 
-    .copiar{
+    .copiar {
         top: 800px;
         left: 220px;
     }
 
     .copyright {
-        top:1300px;
+        top: 1300px;
         text-align: center;
         align-items: center;
-        
+
         font-size: 13px;
         margin-bottom: 40px;
     }
@@ -294,43 +366,43 @@
 }
 
 @media (min-width: 1440px) {
-    .cajatexto{
+    .cajatexto {
         width: 600px;
         height: 500px;
         margin-top: 40px;
         left: 250px;
     }
 
-    .muneco{
+    .muneco {
         top: 100px;
         left: 1032px;
     }
 
-    .muneco-mensaje{
+    .muneco-mensaje {
         top: 400px;
         left: 1032px;
         gap: 16px;
     }
 
-    .texto-salida{
+    .texto-salida {
         margin-top: 40px;
         width: 400px;
         height: 660px;
         left: 1000px;
     }
 
-    .contenedor-botones{
+    .contenedor-botones {
         width: 680px;
         font-size: 24px;
         top: 450px;
     }
 
-    .texto-botones{
+    .texto-botones {
         top: 400px;
         left: 250px;
     }
 
-    .btn{
+    .btn {
         top: 430px;
         left: 240px;
         gap: 24px;
@@ -341,7 +413,7 @@
         left: 550px;
     }
 
-    .copiar{
+    .copiar {
         top: 430px;
         left: 1058px;
     }
@@ -352,5 +424,3 @@
     }
 
 }
-
-
