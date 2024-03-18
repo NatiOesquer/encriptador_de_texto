@@ -109,6 +109,16 @@
     font-weight: bold;
 }
 
+.texto-botones1 {
+    position: absolute;
+    font-family: Inter;
+    color: var(--gris3);
+    margin-top: 480px;
+    left: 220px;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
 .btn {
     position: absolute;
     font-family: Inter;
@@ -197,6 +207,11 @@
         left: 50px;
     }
 
+    .texto-botones1 {
+        top: -44px;
+        left: 30px;
+    }
+
     .btn {
         top: 260px;
         width: 180px;
@@ -221,13 +236,13 @@
     }
 
 
-.copyright {
-    top: 1230px;
-    text-align: center;
-    align-items: center;
-    font-size: 15px;
-    margin-bottom: 10px;
-}
+    .copyright {
+        top: 1230px;
+        text-align: center;
+        align-items: center;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
 
 
 }
@@ -265,6 +280,12 @@
     .texto-botones {
         top: 220px;
         left: 50px;
+    }
+
+    .texto-botones1 {
+        top: -42px;
+        left: 30px;
+
     }
 
     .btn {
@@ -336,6 +357,11 @@
         left: 25px;
     }
 
+    .texto-botones1 {
+        top: -112px;
+        left: 6px;
+    }
+
     .btn {
         top: 200px;
         width: 300px;
@@ -401,6 +427,12 @@
         top: 400px;
         left: 250px;
     }
+
+    .texto-botones1 {
+        top: 137px;
+        left: 228px;
+    
+    } 
 
     .btn {
         top: 430px;
